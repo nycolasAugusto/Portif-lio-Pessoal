@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">Nycolas<span> Augusto</span></div>
+        <nav class="top-nav">
+            <a href="index.html" class="active">Projetos</a>
+            <a href="../sobre/sobre.html">Sobre Mim</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="profile-card">
+                <img src="./imgs/eu curriculo.jpg" alt="Minha Foto" class="profile-img">
+                <div class="profile-info">
+                    <h1>Olá, eu sou o Nycolas Augusto</h1>
+                    <p class="stack-description">
+                        Desenvolvedor focado em <strong>Java, C#.NET e Automação</strong>.
+                        Experiência em ambientes Docker e trabalho colaborativo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filter-group">
+                <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
+                <button class="filter-btn" onclick="filterProjects('java', this)">JAVA</button>
+                <button class="filter-btn" onclick="filterProjects('csharp', this)">C#.NET</button>
+                <button class="filter-btn" onclick="filterProjects('web', this)">Web Básico</button>
+                <button class="filter-btn" onclick="filterProjects('docker', this)">Docker</button>
+                <button class="filter-btn" onclick="filterProjects('equipe', this)">Em Equipe</button>
+                <button class="filter-btn" onclick="filterProjects('c', this)">C</button>
+                <button class="filter-btn" onclick="filterProjects('uipath', this)">UiPath</button>
+            </div>
+        </section>
+        <section class="projects-grid" id="projects-container">
+            
+            <a href="../projeto/projetos.html?id=projeto-1" class="project-card csharp">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/sisPDV.jpeg "alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Sistema PDV Restaurante</h3>
+                    <p>Sistema para gerir estoque e vendas de um restaurante.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-2" class="project-card java equipe docker">
+                <div class="card-image"> 
+                    <img src="./imgs/imgs-projetos/imgp2.jpeg "alt="Sistema GAM">
+                </div>
+                <div class="card-body">
+                    <h3>Sistema GAM</h3>
+                    <p>Sistema de Gestão Ágil desenvolvido em Java.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-3" class="project-card python">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/AutPython.jpeg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Automatizações (Python)</h3>
+                    <p>Scripts inteligentes para automatizar tarefas rotineiras.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-4" class="project-card web">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/LandingPageFarmacia.jpeg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Landing Page Farmácia</h3>
+                    <p>Página web responsiva criada para uma farmácia local.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-5" class="project-card java">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/java.png" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Sistema Biblioteca</h3>
+                    <p>Gestão de acervo e empréstimo de livros feito em Java.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-6" class="project-card java">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/java.png" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Sistema Locadora</h3>
+                    <p>Aplicação focada em Programação Orientada a Objetos.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-7" class="project-card java">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/javaSpring.png" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Task Manager</h3>
+                    <p>Gerenciador de tarefas e rotinas desenvolvido em Java.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-8" class="project-card c">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/c.png" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Algoritmos em C</h3>
+                    <p>Estrutura de dados e fundamentos de programação.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-9" class="project-card uipath">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/Uipath.png" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Robôs UiPath</h3>
+                    <p>Automação de Processos Robóticos (RPA) para empresas.</p>
+                </div>
+            </a>
+
+            <a href="../projeto/projetos.html?id=projeto-10" class="project-card csharp equipe">
+                <div class="card-image">
+                    <img src="./imgs/imgs-projetos/cSharp.jpeg" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Gestão de Faculdade</h3>
+                    <p>Sistema completo para gestão acadêmica e administrativa desenvolvido em equipa.</p>
+                </div>
+            </a>
+
+        </section>
+
+
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

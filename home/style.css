@@ -1,0 +1,131 @@
+/* =========================================
+   BASE E CABEÇALHO
+========================================= */
+:root {
+    --bg-color: #0b0e14;
+    --card-color: #161b22;
+    --accent-vivid: #00f2ff;
+    --text-main: #ffffff;
+    --text-dim: #8b949e;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #161b22;
+    border-bottom: 2px solid var(--accent-vivid);
+}
+
+.logo span { color: var(--accent-vivid); }
+
+.top-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-nav a.active, .top-nav a:hover {
+    color: var(--accent-vivid);
+}
+
+/* =========================================
+   HOME: PERFIL E FILTROS
+========================================= */
+.hero { padding: 50px 8%; }
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--card-color);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-vivid);
+    object-fit: cover;
+}
+
+.stack-description {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+.filters-section { padding: 0 8% 30px; }
+.filter-group { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--text-dim);
+    color: var(--text-dim);
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    border-color: var(--accent-vivid);
+    color: var(--accent-vivid);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+}
+
+/* =========================================
+   HOME: GRID DE PROJETOS E CARTÕES
+========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 8% 50px;
+}
+
+a.project-card {
+    background: var(--card-color);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    text-decoration: none; 
+    color: var(--text-main); 
+    display: block; 
+    cursor: pointer; 
+}
+
+a.project-card:hover {
+    border-color: var(--accent-vivid);
+    transform: translateY(-5px);
+    color: var(--text-main);
+}
+
+.card-image {
+    height: 180px; 
+    width: 100%;
+    overflow: hidden; 
+    background: #30363d; 
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.card-body { padding: 20px; }
