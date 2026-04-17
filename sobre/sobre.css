@@ -1,0 +1,224 @@
+/* =========================================
+   BASE E CABEÇALHO (Partilhado)
+========================================= */
+:root {
+    --bg-color: #0b0e14;
+    --card-color: #161b22;
+    --accent-vivid: #00f2ff;
+    --text-main: #ffffff;
+    --text-dim: #8b949e;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #161b22;
+    border-bottom: 2px solid var(--accent-vivid);
+}
+
+.logo span { color: var(--accent-vivid); }
+
+.top-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-nav a.active,
+.top-nav a:hover {
+    color: var(--accent-vivid);
+}
+
+/* =========================================
+   PÁGINA SOBRE MIM
+========================================= */
+.about-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-hero h1 {
+    color: var(--accent-vivid);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.story-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    background: var(--card-color);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #30363d;
+}
+
+.story-block.reverse { flex-direction: row-reverse; }
+
+.story-content { flex: 1; }
+
+.story-content h2 {
+    color: var(--accent-vivid);
+    margin-top: 0;
+}
+
+/* Caixa de imagem: tamanho fixo quadrado para todas as ocorrências */
+.story-image-box {
+    width: 400px;
+    height: 400px;
+    flex: none;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--accent-vivid);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
+    margin: 0 auto;
+}
+
+.story-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Variante para o carrossel dentro da story-image-box */
+.story-image-box.carousel-wrapper {
+    display: flex;
+}
+
+.learning-list {
+    list-style: none;
+    padding: 0;
+}
+
+.learning-list li {
+    margin-bottom: 10px;
+    color: var(--text-dim);
+}
+
+.learning-list i {
+    color: var(--accent-vivid);
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.tcc-block { flex-direction: column; }
+
+.center-img {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.download-section { margin-top: 30px; }
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent-vivid);
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.btn-download:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+}
+
+.story-block.highlight {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.story-block.highlight h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-style: italic;
+    border-left: 5px solid var(--accent-vivid);
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* =========================================
+   CARROSSEL
+========================================= */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+#sobre-images-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-img.active { opacity: 1; }
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--accent-vivid);
+    color: black;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+@media (max-width: 768px) {
+    .story-block,
+    .story-block.reverse {
+        flex-direction: column;
+    }
+}
